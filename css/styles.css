@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=REM&display=swap");
+
+:root {
+  --search-text: rgb(165, 165, 165);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "REM", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 18px 36px;
+  border-bottom: 1px solid rgb(230, 229, 229);
+}
+
+.nav-list {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-logo {
+  width: 100%;
+  max-width: 40px;
+  min-width: 36px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.link-side-buttons {
+  border: none;
+  background: transparent;
+}
+
+.fa-chevron-down {
+  font-size: 0.75rem;
+  margin-left: 6px;
+}
+
+.nav-funcs {
+  margin-left: auto;
+}
+
+.nav-profile {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  background: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+}
+
+.fa-magnifying-glass {
+  color: var(--search-text);
+  font-size: 0.85rem;
+  margin-right: 8px;
+}
+
+.search-text {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.search-text::placeholder {
+  color: var(--search-text);
+}
+
+.create-button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: white;
+  background: rgb(49, 159, 237);
+}
+
+.create-button:active {
+  background: rgb(35, 116, 173);
+}
