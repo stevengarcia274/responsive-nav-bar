@@ -2,6 +2,7 @@
 
 :root {
   --search-text: rgb(165, 165, 165);
+  --search-bar-bg: rgb(241, 241, 241);
 }
 
 * {
@@ -39,6 +40,7 @@ nav {
   width: 100%;
   max-width: 40px;
   min-width: 36px;
+  margin-right: 36px;
 }
 
 .nav-buttons {
@@ -74,7 +76,7 @@ nav {
   max-width: 700px;
   border-radius: 5px;
   padding: 4px 8px;
-  background: rgb(241, 241, 241);
+  background: var(--search-bar-bg);
   display: flex;
   align-items: center;
 }
@@ -107,4 +109,89 @@ nav {
 
 .create-button:active {
   background: rgb(35, 116, 173);
+}
+
+.hamburger {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  margin-left: 18px;
+  display: none;
+}
+
+.browse-button-container {
+  position: relative;
+}
+
+.browse-menu {
+  background: white;
+  box-shadow: 8px 8px 5px var(--search-bar-bg);
+  display: grid;
+  display: none;
+  grid-template-columns: 2fr 1fr;
+  border: 2px solid var(--search-bar-bg);
+  border-radius: 12px;
+  width: 600px;
+  padding-inline: 36px;
+  position: absolute;
+}
+
+.highlights {
+  padding: 24px 0px;
+  padding-right: 24px;
+}
+
+.hi-logo {
+  background: var(--search-bar-bg);
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.hi-li-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hi-item-container p {
+  color: var(--search-text);
+}
+
+.apps {
+  border-left: 2px solid var(--search-bar-bg);
+  padding: 24px 0px;
+  padding-left: 24px;
+}
+
+.apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-li-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media screen and (max-width: 1015px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .nav-funcs {
+    display: none;
+  }
+
+  .hamburger {
+    margin-left: auto;
+  }
 }
